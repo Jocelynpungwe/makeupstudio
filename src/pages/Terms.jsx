@@ -4,7 +4,7 @@ import { site } from '../data/site'
 const sections = [
   {
     h: 'Using this website',
-    p: [`By using this website you agree to these terms. ${site.legalName}, trading as ${site.name}, may update the site and these terms from time to time. These terms are governed by the laws of the State of Georgia.`],
+    p: [`By using this website you agree to these terms. ${site.legalName}, trading as ${site.name}, may update the site and these terms from time to time. These terms are governed by the laws of the Province of Ontario and the federal laws of Canada that apply there.`],
   },
   {
     h: 'Appointment requests',
@@ -16,7 +16,7 @@ const sections = [
   {
     h: 'Prices and payment',
     p: [
-      'Prices shown on this site are starting prices for one person and exclude add-ons. Your exact quote is confirmed with your appointment.',
+      'Prices shown on this site are in Canadian dollars. They are starting prices for one person and exclude add-ons and HST. Your exact quote is confirmed with your appointment.',
       'A $50 deposit holds your date and is credited toward your service. The remaining balance is due on the day.',
     ],
   },

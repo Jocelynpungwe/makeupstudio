@@ -76,11 +76,11 @@ export default function BeforeAfter({ pair }) {
         onPointerUp={() => (dragging.current = false)}
         onPointerCancel={() => (dragging.current = false)}
       >
-        <img src={pair.after.src} srcSet={`${pair.after.src700} 700w, ${pair.after.src} 1400w`} sizes="(min-width: 1024px) 60vw, 94vw" alt={pair.after.alt} width={pair.w} height={pair.h} className="absolute inset-0 h-full w-full object-cover" draggable="false" loading="lazy" decoding="async" />
+        <img src={pair.after.src} srcSet={`${pair.after.src700} 700w, ${pair.after.src} 1400w`} sizes="(min-width: 1024px) 36rem, 94vw" alt={pair.after.alt} width={pair.w} height={pair.h} className="absolute inset-0 h-full w-full object-cover" draggable="false" loading="lazy" decoding="async" />
         <img
           src={pair.before.src}
           srcSet={`${pair.before.src700} 700w, ${pair.before.src} 1400w`}
-          sizes="(min-width: 1024px) 60vw, 94vw"
+          sizes="(min-width: 1024px) 36rem, 94vw"
           alt={pair.before.alt}
           width={pair.w}
           height={pair.h}

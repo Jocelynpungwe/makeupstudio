@@ -9,7 +9,7 @@
 /* ----------------------------- hero film chapters ----------------------------- */
 export const heroChapters = {
   intro: {
-    eyebrow: 'Makeup artistry for Black women',
+    eyebrow: 'Luxury makeup artistry',
     title: ['Beauty is in', 'the details.'],
     lede: 'Where artistry meets elegance, and every look is designed to make you feel extraordinary.',
   },
@@ -82,7 +82,7 @@ export const collections = [
     id: 'signature',
     name: 'The Signature',
     kicker: 'Featured',
-    body: 'An elevated look with premium finishing and a personalised style, designed around your features.',
+    body: 'An elevated look with premium finishing and a personalized style, designed around your features.',
     includes: ['Everything in The Essential', 'Sculpted definition and highlight', 'Strip lash application', 'Lip colour blend and touch-up kit'],
     price: '$185',
     duration: '90 min',
@@ -104,8 +104,8 @@ export const collections = [
 export const whyPoints = [
   { icon: 'ScanEye', title: 'Attention to detail', body: 'Blended edges, balanced symmetry, a finish that holds up in person and on camera.' },
   { icon: 'Palette', title: 'Colour true to your undertone', body: 'Shades chosen for the way they look on your skin, not the way they look in the pan.' },
-  { icon: 'Sparkles', title: 'Personalised looks', body: 'No templates. Every look is designed around your features, your style and your day.' },
-  { icon: 'Gem', title: 'Thoughtful product choices', body: 'Formulas chosen for how they wear, layer and photograph on deeper complexions.' },
+  { icon: 'Sparkles', title: 'Personalized looks', body: 'No templates. Every look is designed around your features, your style and your day.' },
+  { icon: 'Gem', title: 'Thoughtful product choices', body: 'Formulas chosen for how they wear, layer and photograph on every complexion.' },
   { icon: 'Brush', title: 'Creative artistry', body: 'From polished and natural to graphic and bold, with room for your ideas.' },
   { icon: 'Armchair', title: 'A comfortable experience', body: 'A calm, unhurried chair where you are listened to and never rushed.' },
 ]
@@ -142,11 +142,11 @@ export const faqs = [
   },
   {
     q: 'How should I prepare for my appointment?',
-    a: 'Arrive with a clean, moisturised face and wear a top that does not need to be pulled over your head. Bring inspiration photos and any products you love. If you have a skin reaction to any ingredient, tell us when you request your appointment.',
+    a: 'Arrive with a clean, moisturized face and wear a top that does not need to be pulled over your head. Bring inspiration photos and any products you love. If you have a skin reaction to any ingredient, tell us when you request your appointment.',
   },
   {
-    q: 'Do you work with deeper skin tones?',
-    a: 'Yes. This studio’s work is centred on Black women, from complexion matching and undertone-true colour to finishes that look luminous rather than ashy or heavy.',
+    q: 'Do you work with all skin tones?',
+    a: 'Yes, every skin tone and undertone. Colour matching is at the heart of what we do, from fair to deep complexions, with finishes that look luminous rather than ashy or heavy.',
   },
   {
     q: 'How long will my makeup last?',
@@ -162,7 +162,7 @@ export const faqs = [
   },
   {
     q: 'Do you accept walk-ins or travel to clients?',
-    a: 'Appointments are by request so every client has unhurried time. We travel for weddings, shoots and events within 25 miles of Atlanta for a $75 travel fee, and further by arrangement.',
+    a: 'Appointments are by request so every client has unhurried time. We travel for weddings, shoots and events within 40 km of downtown Toronto for a $75 travel fee, and further by arrangement.',
   },
 ]
 
@@ -197,12 +197,12 @@ export const artistProfile = {
   name: 'Amara Collins',
   role: 'Founder & lead makeup artist',
   fields: [
-    { label: 'Background', value: 'Grew up in her mother’s beauty shop in Atlanta, then spent seven years freelancing across bridal, editorial and backstage work before opening the atelier in 2018.' },
-    { label: 'Specialisation', value: 'Soft glam, bridal makeup and editorial work on deeper skin tones, with a particular love of luminous, true-to-undertone complexions.' },
+    { label: 'Background', value: 'Grew up in her mother’s beauty shop in Toronto, then spent seven years freelancing across bridal, editorial and backstage work before opening the atelier in 2018.' },
+    { label: 'Specialization', value: 'Soft glam, bridal makeup and editorial work across every skin tone, with a particular love of luminous, true-to-undertone complexions.' },
     { label: 'Philosophy', value: 'Makeup should look like your skin on its best day. Colour is matched to your undertone, never forced over it, and nobody leaves the chair feeling rushed.' },
-    { label: 'Training', value: 'Hands-on training under working bridal and editorial artists, plus ongoing masterclasses in colour theory for deeper skin tones.' },
+    { label: 'Training', value: 'Hands-on training under working bridal and editorial artists, plus ongoing masterclasses in colour theory across all skin tones.' },
     { label: 'Experience', value: 'Over twelve years behind the brush, with more than two hundred weddings and a long list of shoots.' },
   ],
   story:
-    'Amara fell in love with makeup watching clients walk into her mother’s shop on Saturday mornings and leave standing taller. She opened Maison Amara so that every Black woman could sit in a chair where her undertone is understood, her ideas are heard and the result looks unmistakably like her.',
+    'Amara fell in love with makeup watching clients walk into her mother’s shop on Saturday mornings and leave standing taller. She opened Maison Amara so that every client could sit in a chair where her undertone is understood, her ideas are heard and the result looks unmistakably like her.',
 }

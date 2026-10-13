@@ -81,7 +81,7 @@ export const addOns = [
   { id: 'lashes', label: 'Lash application', note: '+$25' },
   { id: 'skin-prep', label: 'Extended skin preparation', note: '+$30, 15 extra minutes' },
   { id: 'touch-up-kit', label: 'Touch-up kit for the day', note: '+$20' },
-  { id: 'on-location', label: 'On-location service', note: '+$75 within 25 miles of Atlanta' },
+  { id: 'on-location', label: 'On-location service', note: '+$75 within 40 km of Toronto' },
   { id: 'extra-person', label: 'Additional person', note: 'From $90 each' },
 ]
 

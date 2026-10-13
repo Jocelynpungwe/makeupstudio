@@ -58,7 +58,7 @@ export default function Transformation() {
           </div>
 
           <Reveal className="lg:col-span-8" y={50}>
-            <div id="comparison-panel" role="tabpanel" aria-labelledby={`tab-${id}`}>
+            <div id="comparison-panel" role="tabpanel" aria-labelledby={`tab-${id}`} className="mx-auto w-full max-w-[36rem] lg:ml-auto lg:mr-0">
               <BeforeAfter key={pair.id} pair={pair} />
             </div>
           </Reveal>

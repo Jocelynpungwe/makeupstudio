@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.maisonamara.studio/sitemap.xml
+Sitemap: https://www.maisonamara.ca/sitemap.xml

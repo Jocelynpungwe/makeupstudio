@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="grid gap-x-12 gap-y-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Wordmark size="lg" />
-            <p className="mt-8 max-w-sm text-[1rem] leading-relaxed text-ivory/70">Luxury makeup artistry for Black women. Colour matched to your skin, looks designed around you, and time that is never rushed.</p>
+            <p className="mt-8 max-w-sm text-[1rem] leading-relaxed text-ivory/70">Luxury makeup artistry in Toronto. Colour matched to your skin, looks designed around you, and time that is never rushed.</p>
             <AnchorLink to="/#booking" className="eyebrow link-underline mt-9 inline-block !text-gold">
               Request an appointment
             </AnchorLink>

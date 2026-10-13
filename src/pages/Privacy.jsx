@@ -4,7 +4,7 @@ import { site } from '../data/site'
 const sections = [
   {
     h: 'Who we are',
-    p: [`${site.legalName}, trading as ${site.name}, is a makeup studio at ${site.location.line1}, ${site.location.city}. This policy explains what information we collect through this website and how we use it.`],
+    p: [`${site.legalName}, trading as ${site.name}, is a makeup studio at ${site.location.line1}, ${site.location.city}. This policy explains what information we collect through this website and how we use it. We handle personal information in line with Canada’s Personal Information Protection and Electronic Documents Act (PIPEDA).`],
   },
   {
     h: 'Information you give us',

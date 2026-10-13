@@ -100,7 +100,7 @@ export default function Services() {
                 )
               })}
             </Reveal>
-            <p className="mt-6 text-[0.8rem] text-ink-soft">Prices are starting prices for one person. Your exact quote and timing are confirmed when we reply to your request.</p>
+            <p className="mt-6 text-[0.8rem] text-ink-soft">Prices are in Canadian dollars, before HST, and are starting prices for one person. Your exact quote and timing are confirmed when we reply to your request.</p>
           </div>
         </div>
       </div>

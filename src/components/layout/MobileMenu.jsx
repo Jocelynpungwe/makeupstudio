@@ -95,7 +95,7 @@ export default function MobileMenu({ open, onClose }) {
         <div className="relative mx-6 mt-1 h-36 shrink-0 overflow-hidden rounded-[1.1rem]" aria-hidden="true">
           {seen && <Picture name="gold-hour-profile-glow" sizes="25rem" className="h-full w-full object-cover" style={{ objectPosition: '50% 30%' }} />}
           <div className="absolute inset-0 bg-gradient-to-t from-burgundy-deep/85 via-burgundy-deep/20 to-transparent" />
-          <p className="absolute bottom-3.5 left-4 right-4 font-display text-[1.05rem] italic leading-tight text-ivory">Luxury makeup artistry for Black women.</p>
+          <p className="absolute bottom-3.5 left-4 right-4 font-display text-[1.05rem] italic leading-tight text-ivory">Luxury makeup artistry in Toronto.</p>
         </div>
 
         {/* links */}
@@ -151,4 +151,7 @@ export default function MobileMenu({ open, onClose }) {
             <span className="ml-auto text-[0.78rem] text-ivory/55">{site.instagram.handle}</span>
           </div>
         </div>
-      </di
+      </div>
+    </>
+  )
+}

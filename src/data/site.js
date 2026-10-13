@@ -1,21 +1,21 @@
 /**
- * Studio details. NOTE: this is an invented, internally consistent business profile for a fictional studio
+ * Studio details. NOTE: this is an invented, internally consistent business profile for a fictional Toronto studio
  * (the phone number is in the reserved 555-01xx fiction range). Replace any of it with the real thing.
  */
 export const site = {
   name: 'Maison Amara',
   descriptor: 'Makeup Atelier',
-  tagline: 'Luxury makeup artistry for Black women',
+  tagline: 'Luxury makeup artistry in Toronto',
   description:
-    'Luxury makeup atelier in Atlanta for Black women: soft glam, full glam, bridal and editorial makeup, with colour matched to your skin and undertone. Request your appointment online.',
-  url: 'https://www.maisonamara.studio',
+    'Luxury makeup atelier in Toronto: soft glam, full glam, bridal and editorial makeup, with colour matched to your skin and undertone. Request your appointment online.',
+  url: 'https://www.maisonamara.ca',
   founder: 'Amara Collins',
-  legalName: 'Maison Amara Studio LLC',
+  legalName: 'Maison Amara Studio Inc.',
   founded: 2018,
 
   contact: {
-    email: 'hello@maisonamara.studio',
-    phone: '+1 (404) 555-0142',
+    email: 'hello@maisonamara.ca',
+    phone: '+1 (416) 555-0142',
     // false until a booking endpoint or real inbox is connected: the form then says honestly that nothing was sent
     inboxConnected: false,
     replyTime: 'within one business day',
@@ -27,14 +27,14 @@ export const site = {
   },
 
   location: {
-    line1: '1420 Magnolia Court, Suite 204',
-    city: 'Atlanta, GA 30309',
-    street: '1420 Magnolia Court, Suite 204',
-    locality: 'Atlanta',
-    region: 'GA',
-    postcode: '30309',
-    country: 'US',
-    note: 'Private studio on the second floor. Free parking behind the building.',
+    line1: '412 Queen Street West, Suite 204',
+    city: 'Toronto, ON M5V 2A8',
+    street: '412 Queen Street West, Suite 204',
+    locality: 'Toronto',
+    region: 'ON',
+    postcode: 'M5V 2A8',
+    country: 'CA',
+    note: 'Private studio on the second floor, a short walk from the streetcar. Paid street parking and a public lot next door.',
   },
 
   hours: [
@@ -48,7 +48,12 @@ export const site = {
     verified: false,
     type: 'BeautySalon',
     priceRange: '$$',
-    geo: { latitude: 33.7981, longitude: -84.3855 },
+    geo: { latitude: 43.6487, longitude: -79.3969 },
+  },
+
+  pricing: {
+    currency: 'CAD',
+    note: 'All prices are in Canadian dollars (CAD) and exclude HST.',
   },
 
   booking: {

@@ -15,18 +15,18 @@ export default function Welcome() {
         <div className="grid grid-cols-12 gap-x-6 gap-y-16 lg:gap-y-0">
           <div className="col-span-12 lg:col-span-7 lg:pt-8">
             <SectionHeading number="01" eyebrow="The atelier" size="display-xl" id="welcome-title">
-              More than makeup. <em className="italic-accent text-rose-ink">A form of self-expression.</em>
+              More than makeup. <em className="italic-accent text-rose-ink">A{'\u00A0'}form of self-expression.</em>
             </SectionHeading>
 
             <div className="mt-14 grid gap-10 md:grid-cols-[1.1fr_1fr] lg:mt-20 lg:max-w-[46rem]">
               <Reveal delay={0.1}>
                 <p className="lede !max-w-none !text-[clamp(1.1rem,1.4vw,1.3rem)] !text-espresso">
-                  Every detail tells a story. From timeless elegance to bold creativity, we bring your vision to life through meticulous craftsmanship and personalised care.
+                  Every detail tells a story. From timeless elegance to bold creativity, we bring your vision to life through meticulous craftsmanship and personalized care.
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
                 <p className="lede !max-w-none">
-                  Our work is centred on Black women: colour matched to your undertone, light that flatters your skin, and a calm chair where you are never an afterthought.
+                  Colour matched to your undertone, light that flatters your skin, and a calm chair where you are never an afterthought.
                 </p>
               </Reveal>
             </div>
