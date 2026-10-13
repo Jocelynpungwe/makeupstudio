@@ -1,0 +1,399 @@
+{
+  "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-12",
+    "summary": "Free to use commercially on websites, no attribution required, modification allowed. Not allowed: implying endorsement by the people shown, showing identifiable people in a bad light, using the media in a trademark or business name, or reselling unaltered copies."
+  },
+  "videos": [
+    {
+      "id": "6878730",
+      "title": "Hero film, chapter 1 (preparation)",
+      "creator": "cottonbro studio",
+      "page": "https://www.pexels.com/video/6878730/",
+      "file": "https://videos.pexels.com/video-files/6878730/6878730-uhd_4096_2160_25fps.mp4",
+      "master": "6878730_4k.mp4",
+      "usedSeconds": "0.4 to 6.6"
+    },
+    {
+      "id": "6878740",
+      "title": "Hero film, chapters 2 to 4 (artistry, transformation, reveal)",
+      "creator": "cottonbro studio",
+      "page": "https://www.pexels.com/video/6878740/",
+      "file": "https://videos.pexels.com/video-files/6878740/6878740-uhd_4096_2160_25fps.mp4",
+      "master": "6878740_4k.mp4",
+      "usedSeconds": "2.5 to 11.5, 21 to 30, 41 to 47.2"
+    },
+    {
+      "id": "19884161",
+      "title": "Comparison stills: brows and eyes (stages of one session)",
+      "creator": "Tima Miroshnichenko",
+      "page": "https://www.pexels.com/video/19884161/",
+      "file": "https://videos.pexels.com/video-files/19884161/19884161-uhd_2560_1440_24fps.mp4",
+      "master": "19884161_2k.mp4",
+      "usedSeconds": "frames at 7.5 and 75.0 only"
+    }
+  ],
+  "photos": [
+    {
+      "key": "welcome-portrait-burgundy-glow",
+      "id": "17324452",
+      "pos": "50% 30%",
+      "alt": "Portrait of a Black woman with bronzed, glowing makeup against a deep burgundy backdrop"
+    },
+    {
+      "key": "welcome-gold-eyeshadow-headwrap",
+      "id": "30653960",
+      "pos": "50% 35%",
+      "alt": "Close-up of a Black woman in a rust-coloured headwrap wearing warm gold eyeshadow"
+    },
+    {
+      "key": "welcome-brushes-gold-holder",
+      "id": "8580757",
+      "pos": "50% 50%",
+      "alt": "Makeup brushes standing in a gold wire holder on a white vanity"
+    },
+    {
+      "key": "service-soft-glam",
+      "id": "22619770",
+      "pos": "50% 30%",
+      "alt": "Black woman in gold earrings wearing a soft, warm-toned makeup look"
+    },
+    {
+      "key": "service-full-glam",
+      "id": "19621918",
+      "pos": "50% 30%",
+      "alt": "Close-up of a Black woman with full-glam bronze and gold eyes holding a gold clutch"
+    },
+    {
+      "key": "service-bridal-makeup",
+      "id": "4074119",
+      "pos": "50% 28%",
+      "alt": "Black woman preparing for her wedding in a satin robe with polished, glowing makeup"
+    },
+    {
+      "key": "service-bridal-party",
+      "id": "19834349",
+      "pos": "50% 28%",
+      "alt": "Makeup artists' hands working around a smiling bride in a white robe"
+    },
+    {
+      "key": "service-editorial",
+      "id": "38256844",
+      "pos": "50% 35%",
+      "alt": "Editorial portrait of a Black model with bold makeup in sculpted studio light"
+    },
+    {
+      "key": "service-makeup-lesson",
+      "id": "6954149",
+      "pos": "50% 30%",
+      "alt": "Smiling Black makeup artist holding an eyeshadow palette"
+    },
+    {
+      "key": "service-lash-brow",
+      "id": "12055311",
+      "pos": "50% 40%",
+      "alt": "Close-up of a brow and eyelid being detailed with a fine brush"
+    },
+    {
+      "key": "service-trial-consultation",
+      "id": "7446907",
+      "pos": "50% 40%",
+      "alt": "Makeup artist in black gloves applying makeup to a smiling client in a striped blouse"
+    },
+    {
+      "key": "glow-updo-radiant-skin",
+      "id": "16255349",
+      "pos": "50% 25%",
+      "alt": "Portrait of a Black woman with an updo and naturally radiant, even-toned skin"
+    },
+    {
+      "key": "softglam-studio-portrait",
+      "id": "19161929",
+      "pos": "50% 30%",
+      "alt": "Soft-focus studio portrait of a Black woman with a glamorous bronze look"
+    },
+    {
+      "key": "glow-luminous-skin-upward-gaze",
+      "id": "33170458",
+      "pos": "50% 30%",
+      "alt": "Black woman with a short cut and luminous skin looking upward"
+    },
+    {
+      "key": "softglam-closed-eyes-warm-light",
+      "id": "6874749",
+      "pos": "50% 35%",
+      "alt": "Black woman with closed eyes, glowing skin and glossy lips in warm light"
+    },
+    {
+      "key": "bridal-studio-veil",
+      "id": "6512263",
+      "pos": "50% 30%",
+      "alt": "Smiling Black bride in a white wedding dress and veil in a studio"
+    },
+    {
+      "key": "bridal-lace-gown-veil",
+      "id": "13430156",
+      "pos": "50% 25%",
+      "alt": "Black bride in an ornate lace gown and veil"
+    },
+    {
+      "key": "bridal-rose-detail-veil",
+      "id": "40103717",
+      "pos": "50% 25%",
+      "alt": "Black bride in a white gown with a veil and a rose detail"
+    },
+    {
+      "key": "bridal-eye-makeup-in-progress",
+      "id": "33951059",
+      "pos": "50% 40%",
+      "alt": "Smiling bride having her eye makeup applied"
+    },
+    {
+      "key": "bridal-robe-bouquet",
+      "id": "38708851",
+      "pos": "50% 25%",
+      "alt": "Black bride in a satin robe holding a bouquet"
+    },
+    {
+      "key": "editorial-bold-blush-lips",
+      "id": "37113493",
+      "pos": "50% 40%",
+      "alt": "Close-up of a Black model with bold blush, defined brows and glossy lips"
+    },
+    {
+      "key": "editorial-sequin-top-studio",
+      "id": "38256845",
+      "pos": "50% 30%",
+      "alt": "Studio portrait of a Black model with a short natural cut and sequin top"
+    },
+    {
+      "key": "editorial-hand-at-chin",
+      "id": "38256851",
+      "pos": "50% 30%",
+      "alt": "Black model in studio light with her hand at her chin and bold makeup"
+    },
+    {
+      "key": "editorial-red-light",
+      "id": "7945042",
+      "pos": "50% 40%",
+      "alt": "Black woman lit by dramatic red light with glossy lips"
+    },
+    {
+      "key": "colour-rainbow-eyeshadow",
+      "id": "3484306",
+      "pos": "50% 35%",
+      "alt": "Black woman with vivid rainbow eyeshadow, one hand on her head"
+    },
+    {
+      "key": "colour-violet-teal-braids",
+      "id": "7500798",
+      "pos": "50% 30%",
+      "alt": "Black woman with braids and violet-teal makeup under glamorous light"
+    },
+    {
+      "key": "colour-glitter-teal-light",
+      "id": "6833820",
+      "pos": "50% 35%",
+      "alt": "Black woman with white glitter liner under teal and pink studio light"
+    },
+    {
+      "key": "colour-gold-lip-eyeshadow",
+      "id": "10870223",
+      "pos": "50% 30%",
+      "alt": "Conceptual portrait with gold lipstick, gold eyeshadow and a beaded headwrap"
+    },
+    {
+      "key": "colour-gold-leaf-face-art",
+      "id": "34411559",
+      "pos": "50% 35%",
+      "alt": "Black woman wearing gold leaf face art and braids"
+    },
+    {
+      "key": "gold-eyes-amber-backdrop",
+      "id": "33753917",
+      "pos": "50% 35%",
+      "alt": "Black woman with gold eye makeup against a warm amber backdrop"
+    },
+    {
+      "key": "gold-hour-profile-glow",
+      "id": "8985984",
+      "pos": "50% 40%",
+      "alt": "Gold-lit portrait of a Black woman with closed eyes and glowing skin"
+    },
+    {
+      "key": "gold-sculptural-earrings",
+      "id": "34519115",
+      "pos": "50% 30%",
+      "alt": "Black woman with sculptural earrings and warm, bronzed makeup"
+    },
+    {
+      "key": "gold-copper-hair-dark-backdrop",
+      "id": "12147727",
+      "pos": "50% 30%",
+      "alt": "Black woman with copper-toned hair and warm glamorous makeup on a dark backdrop"
+    },
+    {
+      "key": "lips-bold-red-statement-hoops",
+      "id": "40091382",
+      "pos": "50% 35%",
+      "alt": "Black woman with a bold red lip, hands in her hair and statement hoops"
+    },
+    {
+      "key": "lips-afro-gloss-touch",
+      "id": "33930152",
+      "pos": "50% 35%",
+      "alt": "Black woman with a full afro touching her glossy lips"
+    },
+    {
+      "key": "lips-red-lip-long-braid",
+      "id": "19316022",
+      "pos": "50% 30%",
+      "alt": "Black woman with a long braid and a precise red lip"
+    },
+    {
+      "key": "lips-red-lipstick-application",
+      "id": "6659424",
+      "pos": "50% 45%",
+      "alt": "Close-up of red lipstick being applied with a brush"
+    },
+    {
+      "key": "eyes-black-lip-dramatic-lashes",
+      "id": "13954168",
+      "pos": "50% 40%",
+      "alt": "Black woman with black lipstick and dramatic lashes"
+    },
+    {
+      "key": "skin-even-tone-close-up",
+      "id": "14471494",
+      "pos": "50% 40%",
+      "alt": "Close-up of a Black woman's face with smooth, even skin"
+    },
+    {
+      "key": "skin-half-face-sheen",
+      "id": "11336035",
+      "pos": "50% 40%",
+      "alt": "Half-face close-up showing the natural texture and sheen of dark skin"
+    },
+    {
+      "key": "skin-moody-glistening",
+      "id": "31579771",
+      "pos": "50% 40%",
+      "alt": "Moody portrait of a Black woman with glistening skin against a dark backdrop"
+    },
+    {
+      "key": "skin-berry-blush-lip",
+      "id": "17566311",
+      "pos": "50% 40%",
+      "alt": "Black model with a berry blush and lip colour"
+    },
+    {
+      "key": "chair-orange-eyeshadow-brush",
+      "id": "10698003",
+      "pos": "50% 40%",
+      "alt": "Makeup artist's brush shaping orange eyeshadow on a Black client"
+    },
+    {
+      "key": "chair-blush-finish-brush",
+      "id": "10698007",
+      "pos": "50% 35%",
+      "alt": "Black client having her makeup finished with a soft brush"
+    },
+    {
+      "key": "chair-eyes-in-detail",
+      "id": "10279715",
+      "pos": "50% 35%",
+      "alt": "Artist working on a Black client's eyes with a palette in view"
+    },
+    {
+      "key": "chair-powder-forehead",
+      "id": "6954114",
+      "pos": "50% 35%",
+      "alt": "Black makeup artist buffing powder across a client's forehead"
+    },
+    {
+      "key": "chair-wedding-morning-touch-up",
+      "id": "28245109",
+      "pos": "50% 35%",
+      "alt": "Woman receiving a final blush touch-up before her wedding"
+    },
+    {
+      "key": "experience-consultation-table",
+      "id": "6954145",
+      "pos": "50% 40%",
+      "alt": "Two women at a makeup table during a consultation"
+    },
+    {
+      "key": "experience-vanity-mirror",
+      "id": "12322969",
+      "pos": "50% 40%",
+      "alt": "Woman applying makeup at a vanity mirror lined with products"
+    },
+    {
+      "key": "experience-complexion-concealer",
+      "id": "6954211",
+      "pos": "50% 40%",
+      "alt": "Concealer being blended under the eye with an applicator"
+    },
+    {
+      "key": "experience-final-reveal-smile",
+      "id": "19907797",
+      "pos": "50% 30%",
+      "alt": "Smiling Black woman in a white dress wearing bold eyeshadow"
+    },
+    {
+      "key": "artist-portrait-placeholder",
+      "id": "13029423",
+      "pos": "50% 30%",
+      "alt": "Smiling Black makeup artist with braids holding makeup brushes (stock placeholder portrait)"
+    },
+    {
+      "key": "ig-orange-top-afro",
+      "id": "14001761",
+      "pos": "50% 30%",
+      "alt": "Studio portrait of a Black woman with an afro hairstyle and warm makeup"
+    },
+    {
+      "key": "ig-black-backdrop-pose",
+      "id": "20333494",
+      "pos": "50% 30%",
+      "alt": "Black woman posing on a black backdrop with a glowing complexion"
+    },
+    {
+      "key": "ig-curly-hair-portrait",
+      "id": "27898856",
+      "pos": "50% 30%",
+      "alt": "Black woman with long curly hair and soft, warm makeup"
+    },
+    {
+      "key": "ig-alluring-portrait",
+      "id": "5579643",
+      "pos": "50% 35%",
+      "alt": "Alluring portrait of a Black woman in warm studio light"
+    },
+    {
+      "key": "ig-natural-beauty-gaze",
+      "id": "8578925",
+      "pos": "50% 30%",
+      "alt": "Black woman looking at the camera with a natural, defined look"
+    },
+    {
+      "key": "ig-stylish-makeup-portrait",
+      "id": "30062508",
+      "pos": "50% 30%",
+      "alt": "Portrait of a Black woman with stylish eye makeup"
+    },
+    {
+      "key": "ig-afro-gold-necklace",
+      "id": "29852807",
+      "pos": "50% 30%",
+      "alt": "Black woman with afro hair and a gold necklace"
+    },
+    {
+      "key": "ig-crop-top-studio",
+      "id": "25588138",
+      "pos": "50% 30%",
+      "alt": "Black model in a black crop top with a polished makeup look"
+    }
+  ]
+}

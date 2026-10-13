@@ -1,0 +1,827 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/bodoni-moda/opsz.css';
+@import '@fontsource-variable/bodoni-moda/opsz-italic.css';
+@import '@fontsource-variable/manrope/wght.css';
+
+/* ------------------------------------------------------------------
+   Design tokens. Ivory carries the page, burgundy carries contrast,
+   dusty rose and muted gold appear in small, deliberate doses.
+------------------------------------------------------------------- */
+@theme {
+  --color-ivory: #faf7f2;
+  --color-champagne: #e9ddd0;
+  --color-champagne-soft: #f1eae1;
+  --color-rose: #c78f98;
+  --color-burgundy: #552b39;
+  --color-espresso: #332724;
+  --color-gold: #b99a6b;
+
+  /* Derived, for text that must pass contrast on ivory */
+  --color-burgundy-deep: #3e1d29;
+  --color-espresso-deep: #221917;
+  --color-ink-soft: #5b4a45;
+  --color-gold-ink: #85693e;
+  --color-rose-ink: #9a5f6b;
+  --color-line: #d9cdbf;
+
+  --font-display: 'Bodoni Moda Variable', 'Bodoni 72', Didot, 'Times New Roman', serif;
+  --font-sans: 'Manrope Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --breakpoint-xs: 30rem;
+}
+
+:root {
+  --gutter: clamp(1.25rem, 4.5vw, 4.5rem);
+  --header-h: 4.5rem;
+  --shadow-lift: 0 30px 60px -30px rgb(51 39 36 / 0.45);
+}
+
+@layer base {
+/* ------------------------------------------------------------------
+   Base
+------------------------------------------------------------------- */
+html {
+  background-color: var(--color-ivory);
+  overflow-x: hidden;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+}
+
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
+  background-color: var(--color-ivory);
+  color: var(--color-espresso);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* One environment layer: fixed film grain, whisper level, never blends with content */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: var(--color-burgundy);
+  color: var(--color-ivory);
+}
+
+img,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+  font-optical-sizing: auto;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Focus: always visible, never decorative */
+:focus-visible {
+  outline: 2px solid var(--color-burgundy);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+.on-dark :focus-visible,
+.on-dark:focus-visible {
+  outline-color: var(--color-gold);
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 200;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-burgundy);
+  color: var(--color-ivory);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transform: translateY(-200%);
+  transition: transform 0.3s var(--ease-expo);
+}
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+}
+
+@layer components {
+/* ------------------------------------------------------------------
+   Type system
+------------------------------------------------------------------- */
+.display-xxl {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5.6vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+.display-xl {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.05rem, 4vw, 3.7rem);
+  line-height: 1.03;
+  letter-spacing: -0.022em;
+}
+/* Cinema title cards: sized so the longest line ("YOUR SIGNATURE.") never wraps on a phone */
+.display-hero {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.85rem, 7.8vw, 2.9rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
+@media (min-width: 640px) {
+  .display-hero {
+    font-size: clamp(2.5rem, 5.2vw, 5rem);
+    letter-spacing: -0.026em;
+  }
+}
+.display-lg {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3.1vw, 2.9rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.display-md {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.4rem, 2.2vw, 1.95rem);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+.display-sm {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+}
+.italic-accent {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.lede {
+  font-size: clamp(1.02rem, 1.25vw, 1.2rem);
+  line-height: 1.75;
+  max-width: 34rem;
+  color: var(--color-ink-soft);
+}
+.on-dark .lede {
+  color: color-mix(in srgb, var(--color-ivory) 82%, transparent);
+}
+
+.ghost-word {
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  text-align: center;
+  height: clamp(2.5rem, 8.5vw, 8.5rem);
+  overflow: hidden;
+}
+.ghost-word::before {
+  content: attr(data-word);
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(3rem, 11vw, 11rem);
+  line-height: 0.82;
+  color: rgb(250 247 242 / 0.05);
+}
+
+.hairline {
+  height: 1px;
+  background: var(--color-line);
+}
+.on-dark .hairline {
+  background: color-mix(in srgb, var(--color-ivory) 18%, transparent);
+}
+
+.section-pad {
+  padding-block: clamp(5.5rem, 12vw, 12rem);
+}
+.gutter {
+  padding-inline: var(--gutter);
+}
+.container-wide {
+  width: 100%;
+  max-width: 1760px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ------------------------------------------------------------------
+   Buttons
+------------------------------------------------------------------- */
+.btn {
+  --chip: 2.35rem;
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  min-height: 3.25rem;
+  padding: 0 1.9rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    color 0.45s var(--ease-expo),
+    border-color 0.45s var(--ease-expo),
+    background-color 0.45s var(--ease-expo),
+    box-shadow 0.45s var(--ease-expo),
+    transform 0.45s var(--ease-expo);
+}
+.btn-with-chip {
+  padding-right: calc((3.25rem - var(--chip)) / 2 - 1px);
+  padding-left: 1.65rem;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  transform: translateY(102%);
+  transition: transform 0.55s var(--ease-expo);
+}
+.btn:hover::before,
+.btn:focus-visible::before {
+  transform: translateY(0);
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+.btn:active {
+  transform: translateY(0) scale(0.985);
+}
+
+/* the round arrow chip */
+.btn-chip {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: var(--chip);
+  height: var(--chip);
+  border-radius: 50%;
+  background: color-mix(in srgb, currentColor 16%, transparent);
+  transition:
+    background-color 0.45s var(--ease-expo),
+    color 0.45s var(--ease-expo);
+}
+.btn-chip svg {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.5s var(--ease-expo);
+}
+.btn:hover .btn-chip svg,
+.btn:focus-visible .btn-chip svg {
+  transform: rotate(-45deg);
+}
+
+.btn-primary {
+  background: var(--color-burgundy);
+  color: var(--color-ivory);
+}
+.btn-primary::before {
+  background: var(--color-espresso);
+}
+.btn-primary:hover {
+  box-shadow: 0 14px 28px -16px rgb(51 39 36 / 0.7);
+}
+.btn-primary:hover .btn-chip {
+  background: var(--color-gold);
+  color: var(--color-espresso-deep);
+}
+
+.btn-gold {
+  background: var(--color-gold);
+  color: var(--color-espresso-deep);
+}
+.btn-gold::before {
+  background: var(--color-ivory);
+}
+.btn-gold:hover {
+  box-shadow: 0 14px 30px -16px rgb(0 0 0 / 0.55);
+}
+.btn-gold .btn-chip {
+  background: rgb(34 25 23 / 0.12);
+}
+.btn-gold:hover .btn-chip {
+  background: var(--color-burgundy);
+  color: var(--color-ivory);
+}
+
+.btn-outline {
+  border-color: color-mix(in srgb, var(--color-burgundy) 45%, transparent);
+  color: var(--color-burgundy);
+}
+.btn-outline::before {
+  background: var(--color-burgundy);
+}
+.btn-outline:hover,
+.btn-outline:focus-visible {
+  color: var(--color-ivory);
+  border-color: var(--color-burgundy);
+}
+
+.btn-light {
+  border-color: color-mix(in srgb, var(--color-ivory) 45%, transparent);
+  color: var(--color-ivory);
+}
+.btn-light::before {
+  background: var(--color-ivory);
+}
+.btn-light:hover,
+.btn-light:focus-visible {
+  color: var(--color-burgundy);
+  border-color: var(--color-ivory);
+}
+.btn-light:hover .btn-chip {
+  background: var(--color-burgundy);
+  color: var(--color-ivory);
+}
+
+.btn-sm {
+  --chip: 1.85rem;
+  min-height: 2.6rem;
+  padding: 0 1.35rem;
+  font-size: 0.8125rem;
+}
+.btn-sm.btn-with-chip {
+  padding-left: 1.2rem;
+  padding-right: calc((2.6rem - var(--chip)) / 2 - 1px);
+}
+
+/* round icon buttons (carousel arrows, viewer controls) */
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  flex: none;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--color-burgundy) 35%, transparent);
+  color: var(--color-burgundy);
+  transition:
+    background-color 0.4s var(--ease-expo),
+    color 0.4s var(--ease-expo),
+    border-color 0.4s var(--ease-expo),
+    transform 0.4s var(--ease-expo);
+}
+.icon-btn:hover {
+  background: var(--color-burgundy);
+  border-color: var(--color-burgundy);
+  color: var(--color-ivory);
+}
+.icon-btn:active {
+  transform: scale(0.94);
+}
+.icon-btn-light {
+  border-color: color-mix(in srgb, var(--color-ivory) 35%, transparent);
+  color: var(--color-ivory);
+  background: color-mix(in srgb, var(--color-espresso-deep) 55%, transparent);
+}
+.icon-btn-light:hover {
+  background: var(--color-ivory);
+  border-color: var(--color-ivory);
+  color: var(--color-espresso-deep);
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .touch-target {
+    min-height: 48px;
+  }
+  .btn-sm {
+    min-height: 44px;
+  }
+}
+
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.2em;
+  height: 1px;
+  background: currentColor;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.6s var(--ease-expo);
+}
+.link-underline:hover::after,
+.link-underline:focus-visible::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* ------------------------------------------------------------------
+   Hero (scroll-scrubbed film). All motion here is transform + opacity.
+------------------------------------------------------------------- */
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 120% 90% at 50% 40%, rgb(34 25 23 / 0) 35%, rgb(34 25 23 / 0.6) 100%),
+    linear-gradient(to top, rgb(34 25 23 / 0.78) 0%, rgb(34 25 23 / 0.28) 34%, rgb(34 25 23 / 0) 58%);
+}
+
+/* Per-band scrim: dims the footage only while that caption is on screen */
+.hero-band {
+  --k: 0;
+  --o: 0;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 var(--gutter) clamp(3.2rem, 9vh, 6.5rem);
+  color: var(--color-ivory);
+  text-shadow: 0 1px 2px rgb(20 12 10 / 0.9), 0 4px 18px rgb(20 12 10 / 0.7), 0 12px 48px rgb(20 12 10 / 0.7);
+  opacity: var(--o);
+  pointer-events: none;
+  will-change: opacity;
+}
+.hero-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgb(20 12 10 / 0.74) 0%, rgb(20 12 10 / 0.5) 30%, rgb(20 12 10 / 0) 62%);
+  opacity: calc(0.35 + 0.65 * var(--k));
+}
+.hero-band .btn {
+  text-shadow: none;
+  pointer-events: auto;
+}
+
+.hero-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+.hero-line > span {
+  display: block;
+  --kc: clamp(0, (var(--k) - var(--th, 0)) * 3.2, 1);
+}
+/* rise: words climb into place */
+[data-fx='rise'] .hero-line > span {
+  transform: translateY(calc((1 - var(--kc)) * 112%));
+}
+/* wipe: a liner stroke, left to right */
+[data-fx='wipe'] .hero-line > span {
+  clip-path: inset(0 calc((1 - var(--kc)) * 100%) 0 0);
+  transform: translateX(calc((1 - var(--kc)) * -2%));
+}
+/* bloom: approaches the lens and sharpens */
+[data-fx='bloom'] .hero-line > span {
+  opacity: var(--kc);
+  transform: scale(calc(0.93 + 0.07 * var(--kc)));
+  transform-origin: 0% 100%;
+}
+.hero-fade {
+  opacity: clamp(0, (var(--k) - var(--th, 0.3)) * 4, 1);
+  transform: translateY(calc((1 - clamp(0, (var(--k) - var(--th, 0.3)) * 4, 1)) * 18px));
+}
+
+.hero-label::before {
+  content: '';
+  display: inline-block;
+  width: calc(2.6rem * var(--k));
+  height: 1px;
+  background: var(--color-gold);
+  margin-right: 0.9rem;
+  vertical-align: middle;
+}
+
+.scroll-cue-line {
+  position: relative;
+  width: 1px;
+  height: 3.4rem;
+  background: color-mix(in srgb, var(--color-ivory) 28%, transparent);
+  overflow: hidden;
+}
+.scroll-cue-line::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-gold);
+  transform: translateY(-100%);
+  animation: cue 2.6s var(--ease-soft) infinite;
+  animation-delay: -1.2s;
+}
+@keyframes cue {
+  0% {
+    transform: translateY(-100%);
+  }
+  60%,
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.hero-ring circle {
+  transition: stroke-dashoffset 0.25s linear;
+}
+
+/* video + poster layering */
+.hero-media > * {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-live {
+  opacity: 0;
+  transition: opacity 0.9s var(--ease-soft);
+  will-change: transform;
+  transform: translateZ(0);
+}
+.hero-ready .hero-live {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------------
+   Gallery / sliders / misc
+------------------------------------------------------------------- */
+.masonry {
+  column-gap: clamp(0.9rem, 1.6vw, 1.75rem);
+}
+.masonry > * {
+  break-inside: avoid;
+  margin-bottom: clamp(0.9rem, 1.6vw, 1.75rem);
+}
+
+.ba-handle-ring {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-ivory) 85%, transparent), 0 10px 30px rgb(20 12 10 / 0.5);
+}
+
+.accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.7s var(--ease-expo);
+}
+.accordion-panel[data-open='true'] {
+  grid-template-rows: 1fr;
+}
+.accordion-panel > div {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.rail-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.rail-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* custom cursor, desktop only */
+.cursor-ring {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 120;
+  width: 2.6rem;
+  height: 2.6rem;
+  margin: -1.3rem 0 0 -1.3rem;
+  border: 1px solid var(--color-gold);
+  border-radius: 999px;
+  pointer-events: none;
+  opacity: 0;
+  display: grid;
+  place-items: center;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-ivory);
+  transition: opacity 0.4s var(--ease-soft), width 0.5s var(--ease-expo), height 0.5s var(--ease-expo), margin 0.5s var(--ease-expo), background-color 0.4s;
+  mix-blend-mode: normal;
+}
+.cursor-ring[data-state='link'] {
+  width: 4.2rem;
+  height: 4.2rem;
+  margin: -2.1rem 0 0 -2.1rem;
+  background: color-mix(in srgb, var(--color-burgundy) 88%, transparent);
+  border-color: transparent;
+}
+.cursor-ring[data-visible='true'] {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------------
+   Utilities
+------------------------------------------------------------------- */
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hover-lift {
+    transition: transform 0.8s var(--ease-expo);
+  }
+  .hover-lift:hover {
+    transform: translateY(-6px);
+  }
+}
+
+
+}
+
+/* ------------------------------------------------------------------
+   Keyframes
+------------------------------------------------------------------- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes quote-in {
+  from {
+    opacity: 0;
+    transform: translateX(calc(var(--dir, 1) * 36px));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes lb-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes lb-img {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.quote-in {
+  animation: quote-in 0.9s var(--ease-expo) both;
+}
+
+/* Entrances: cheap CSS transitions flipped by one shared IntersectionObserver (see lib/inview.js) */
+.rv-pre {
+  opacity: 0;
+  transform: translate3d(0, var(--ry, 34px), 0);
+}
+.rv-pre[data-rv='stagger'] {
+  opacity: 1;
+  transform: none;
+}
+.rv-pre[data-rv='stagger'] > * {
+  opacity: 0;
+  transform: translate3d(0, var(--ry, 34px), 0);
+}
+.rv-in,
+.rv-in[data-rv='stagger'] > * {
+  transition:
+    opacity 1.3s var(--ease-expo) var(--rd, 0s),
+    transform 1.3s var(--ease-expo) var(--rd, 0s);
+}
+.split-pre {
+  /* opacity, not visibility: the heading stays in the accessibility tree while it waits to animate */
+  opacity: 0;
+}
+.ir-pre {
+  clip-path: var(--ir-clip, inset(100% 0 0 0));
+}
+.ir-pre > .ir-inner {
+  transform: scale(1.28);
+}
+.ir-in {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 1.5s var(--ease-soft);
+}
+.ir-in > .ir-inner {
+  transform: scale(var(--ir-scale, 1));
+  transition: transform 1.9s var(--ease-expo);
+}
+.lb-enter {
+  animation: lb-in 0.4s var(--ease-soft) both;
+}
+.lb-img {
+  animation: lb-img 0.7s var(--ease-expo) both;
+}
+.split-line {
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+
+/* ------------------------------------------------------------------
+   Reduced motion: honored completely. Everything lands in its final state.
+------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+  .scroll-cue-line::after {
+    animation: none;
+    transform: none;
+  }
+}
+
+/* Pause all looping animation on hidden tabs (animation-play-state is not inherited) */
+body.paused *,
+body.paused *::before,
+body.paused *::after {
+  animation-play-state: paused !important;
+}
