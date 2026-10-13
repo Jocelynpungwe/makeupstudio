@@ -17,7 +17,7 @@ export default function Transformation() {
         </SectionHeading>
 
         <div className="mt-16 grid gap-x-10 gap-y-14 lg:mt-24 lg:grid-cols-12">
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-5">
 
             <Reveal delay={0.2}>
               <div role="tablist" aria-label="Choose a comparison" className="border-t border-ivory/20">
@@ -57,8 +57,8 @@ export default function Transformation() {
             </Reveal>
           </div>
 
-          <Reveal className="lg:col-span-8" y={50}>
-            <div id="comparison-panel" role="tabpanel" aria-labelledby={`tab-${id}`} className="mx-auto w-full max-w-[36rem] lg:ml-auto lg:mr-0">
+          <Reveal className="lg:col-span-7" y={50}>
+            <div id="comparison-panel" role="tabpanel" aria-labelledby={`tab-${id}`} className="mx-auto w-full max-w-[40rem] lg:ml-auto lg:mr-0">
               <BeforeAfter key={pair.id} pair={pair} />
             </div>
           </Reveal>

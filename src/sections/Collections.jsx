@@ -38,7 +38,7 @@ export default function Collections() {
               </h3>
               <p className={`text-[0.92rem] leading-relaxed ${c.featured || c.id === 'statement' ? 'text-ivory/85' : 'text-ink-soft'}`}>{c.body}</p>
 
-              <ul className="mt-6 space-y-2.5 border-t border-current/15 pt-6">
+              <ul className="mb-7 mt-6 space-y-2.5 border-t border-current/15 pt-6">
                 {c.includes.map((line) => (
                   <li key={line} className="flex items-start gap-3 text-[0.88rem] leading-snug">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.6} aria-hidden="true" />
